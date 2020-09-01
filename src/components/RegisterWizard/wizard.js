@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from "react";
+import React, { useState } from "react";
 import StepWizard from "react-step-wizard";
 import Nav from "./nav";
 import "./wizard.css";
@@ -60,7 +60,7 @@ const Wizard = (props) => {
   const signIn = () => {
     props.history.push("/login");
   };
-  const { SW, demo } = state;
+  // const { SW, demo } = state;
 
   return (
     <div className={"jumbotron wizardContainer"}>
@@ -75,7 +75,7 @@ const Wizard = (props) => {
       </div>
       <div className="row">
         <div className={`col-12 col-sm-6 offset-sm-3 ${styles["rsw-wrapper"]}`}>
-          {onRegister == true ? (
+          {onRegister === true ? (
             <Fourth form={state.form} />
           ) : (
             <StepWizard

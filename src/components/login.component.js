@@ -19,7 +19,7 @@ class Login extends React.Component {
   componentWillMount() {
     const { cookies } = this.props;
     const accessInfo = cookies.get("access_info");
-    if (accessInfo != undefined) {
+    if (accessInfo !== undefined) {
       ///user logged in
       this.props.history.push("/dashboard");
     }
@@ -98,7 +98,7 @@ class Login extends React.Component {
               {error && (
                 <div class="alert alert-danger" role="alert">
                   {errorMessage}{" "}
-                  {statusCode == 400 && (
+                  {statusCode === 400 && (
                     <div>
                       Please <a href="/forgotPassword">reset</a> your password
                       to login!

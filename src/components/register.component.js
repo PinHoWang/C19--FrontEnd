@@ -5,13 +5,13 @@ import { withCookies } from "react-cookie";
 import { withRouter } from "react-router-dom";
 
 class Register extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
   componentWillMount() {
     const { cookies } = this.props;
     const accessInfo = cookies.get("access_info");
-    if (accessInfo != undefined) {
+    if (accessInfo !== undefined) {
       ///user logged in
       this.props.history.push("/dashboard");
     }

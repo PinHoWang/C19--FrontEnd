@@ -95,6 +95,7 @@ class Second extends React.Component {
             <a
               href="https://www.northeastern.edu/privacy-information/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               Please see our privacy policy
             </a>

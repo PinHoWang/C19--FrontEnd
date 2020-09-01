@@ -7,28 +7,28 @@ import React from "react";
 class Stats extends React.Component {
   render() {
     const {
-      currentStep,
-      firstStep,
-      goToStep,
-      lastStep,
+      // currentStep,
+      // firstStep,
+      // goToStep,
+      // lastStep,
       nextStep,
       previousStep,
-      totalSteps,
+      // totalSteps,
       step,
       form,
     } = this.props;
     const hasValue = (obj, key) => {
-      let bool = obj.hasOwnProperty(key) && obj[key] != "" && obj[key] != null;
+      let bool = obj.hasOwnProperty(key) && obj[key] !== "" && obj[key] != null;
       return bool;
     };
     const isTermsChecked = (obj, key) => {
-      let bool = obj.hasOwnProperty(key) && obj[key] == true;
+      let bool = obj.hasOwnProperty(key) && obj[key] === true;
       return bool;
     };
     const validateRequired = () => {
-      if (step == 1) {
+      if (step === 1) {
         let result =
-          form != undefined &&
+          form !== undefined &&
           hasValue(form, "firstName") &&
           hasValue(form, "lastName") &&
           hasValue(form, "dateofBirth");
@@ -37,14 +37,14 @@ class Stats extends React.Component {
           alert("Please input all the required fields!");
           return;
         }
-      } else if (step == 2) {
+      } else if (step === 2) {
         const {
           isEmailAddress,
           isEmailAlreadyExists,
           isPasswordMatch,
         } = this.props;
         let result =
-          form != undefined &&
+          form !== undefined &&
           hasValue(form, "email") &&
           isEmailAddress &&
           !isEmailAlreadyExists &&
@@ -56,9 +56,9 @@ class Stats extends React.Component {
           alert("Please input all the required fields!");
           return;
         }
-      } else if (step == 3) {
+      } else if (step === 3) {
         let result =
-          form != undefined &&
+          form !== undefined &&
           hasValue(form, "type") &&
           hasValue(form, "education") &&
           hasValue(form, "skills") &&
@@ -83,7 +83,7 @@ class Stats extends React.Component {
             <br />
           </div>
         )}
-        {step == 3 ? (
+        {step === 3 ? (
           <div className="container-registerBtn">
             <button className="registerBtn" onClick={validateRequired}>
               Register

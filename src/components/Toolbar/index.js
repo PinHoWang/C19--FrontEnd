@@ -26,7 +26,7 @@ const useStyles = makeStyles({
 });
 
 export const Toolbar = () => {
-  const [cookies, setCookie, removeCookie] = useCookies(["access_info"]);
+  const [cookies, removeCookie] = useCookies(["access_info"]);
   let history = useHistory();
   const status = useSelector((state) => state.getUserInfoReducer.status);
   const classes = useStyles();
@@ -42,7 +42,7 @@ export const Toolbar = () => {
   useEffect(() => {
     // Your code here
     let accessInfo = cookies.access_info;
-    if (accessInfo != undefined) {
+    if (accessInfo !== undefined) {
       ///user logged in
       dispatch(getUserInfo(accessInfo.userid, accessInfo.token));
     }

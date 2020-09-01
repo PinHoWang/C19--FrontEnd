@@ -137,6 +137,7 @@ class Third extends React.Component {
           <a
             href="https://www.northeastern.edu/privacy-information/"
             target="_blank"
+            rel="noopener noreferrer"
           >
             I agree the the Skunka.ai EULA
           </a>

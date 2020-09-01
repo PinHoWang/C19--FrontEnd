@@ -2,7 +2,7 @@ version: 2.1
 executors:
   docker-publisher:
     environment:
-      IMAGE_NAME: skunks/covid19frontend:1.2.2
+      IMAGE_NAME: skunks/covid19frontend:1.2.3
     docker:
       - image: circleci/buildpack-deps:stretch
 orbs:

@@ -131,7 +131,7 @@ class Profile extends React.Component {
   componentWillMount() {
     const { cookies, getUserInfo } = this.props;
     const accessInfo = cookies.get('access_info');
-    if (accessInfo != undefined) {
+    if (accessInfo !== undefined) {
       ///user logged in
       getUserInfo(accessInfo.userid, accessInfo.token);
     } else {

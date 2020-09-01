@@ -35,7 +35,7 @@ class Fourth extends Component {
     return (
       <div>
         <ErrorNotification message={error} />
-        {register == true && (
+        {register === true && (
           <div class="alert alert-success" role="alert">
             <h4 class="alert-heading">{registrationMessage}</h4>
             <p>

@@ -3,16 +3,16 @@ import './homepage.component.css';
 import WorkOutlineIcon from '@material-ui/icons/WorkOutline';
 import ImportantDevicesIcon from '@material-ui/icons/ImportantDevices';
 import LocalAtmIcon from '@material-ui/icons/LocalAtm';
-import BarChartIcon from '@material-ui/icons/BarChart';
-import CreateIcon from '@material-ui/icons/Create';
-import PeopleIcon from '@material-ui/icons/People';
+// import BarChartIcon from '@material-ui/icons/BarChart';
+// import CreateIcon from '@material-ui/icons/Create';
+// import PeopleIcon from '@material-ui/icons/People';
 import Volunteer from './images/volunteer.png';
 import Button from '@material-ui/core/Button';
 import { Toolbar } from '../components/Toolbar';
 import { withCookies } from 'react-cookie';
 import { withRouter } from 'react-router';
-import Link from '@material-ui/core/Link';
-import { Link as RouterLink } from 'react-router-dom';
+// import Link from '@material-ui/core/Link';
+// import { Link as RouterLink } from 'react-router-dom';
 
 class Homepage extends React.Component {
   constructor(props) {
@@ -22,7 +22,7 @@ class Homepage extends React.Component {
   componentWillMount() {
     const { cookies } = this.props;
     const accessInfo = cookies.get('access_info');
-    if (accessInfo != undefined) {
+    if (accessInfo !== undefined) {
       ///user logged in
       this.props.history.push('/dashboard');
     }
